@@ -1,0 +1,24 @@
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{DBFDDBD7-E236-444C-98E5-736A4F22C8A5}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="sysdrawing-coregraphics/System.Drawing/Graphics.cs">
+    <Files>
+      <File FileName="sysdrawing-coregraphics/System.Drawing/Region.cs" Line="633" Column="10" />
+      <File FileName="sysdrawing-coregraphics/System.Drawing/Graphics.cs" Line="1400" Column="36" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MacPlayground" expanded="True">
+            <Node name="System.Drawing (CoreGraphics)" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Xamarin-Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.FormsTest PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
