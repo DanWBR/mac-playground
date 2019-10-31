@@ -1,0 +1,47 @@
+/verbose
+ /debug
+"/output:/Users/Daniel/Projects/mac-playground/FormsTestApp/bin/Xamarin - Debug/"
+/name:FormsTestApp
+ /profile:Xamarin.Mac,Version=v4.5,Profile=Full
+ /arch:x86_64
+ --http-message-handler=NSUrlSessionHandler
+ /minos=10.11
+ /profiling
+ /sgen-conc
+ /nolink
+"/i18n:cjk,mideast,other,rare,west"
+"/assembly:/Users/Daniel/Projects/mac-playground/FormsTest/bin/Xamarin - Debug/FormsTest.exe"
+/assembly:/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/mono/4.5/mscorlib.dll
+/assembly:/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/mono/4.5/System.Core.dll
+/assembly:/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/mono/4.5/System.dll
+/assembly:/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/mono/4.5/Facades/System.Drawing.Common.dll
+"/assembly:/Users/Daniel/Projects/mac-playground/bin/Xamarin - Debug/System.Drawing.dll"
+"/assembly:/Users/Daniel/Projects/mac-playground/mono/mcs/class/System.Windows.Forms/bin/Xamarin - Debug/System.Windows.Forms.dll"
+/assembly:/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/reference/full/Xamarin.Mac.dll
+"/assembly:/Users/Daniel/Projects/mac-playground/bin/Xamarin - Debug/System.Drawing.dll"
+"/assembly:/Users/Daniel/Projects/mac-playground/mono/mcs/class/System.Windows.Forms/bin/Xamarin - Debug/System.Windows.Forms.dll"
+/assembly:/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/reference/full/Xamarin.Mac.dll
+"/assembly:/Users/Daniel/Projects/mac-playground/mono/mcs/class/System.Windows.Forms/bin/Xamarin - Debug/MacApi.dll"
+"/assembly:/Users/Daniel/Projects/mac-playground/mono/mcs/class/System.Windows.Forms/bin/Xamarin - Debug/Mono.WebBrowser.dll"
+"/assembly:/Users/Daniel/Projects/mac-playground/mono/mcs/class/System.Windows.Forms/bin/Xamarin - Debug/sk/System.Windows.Forms.resources.dll"
+"/assembly:/Users/Daniel/Projects/mac-playground/mono/mcs/class/System.Windows.Forms/bin/Xamarin - Debug/pl/System.Windows.Forms.resources.dll"
+"/assembly:/Users/Daniel/Projects/mac-playground/mono/mcs/class/System.Windows.Forms/bin/Xamarin - Debug/sv/System.Windows.Forms.resources.dll"
+"/assembly:/Users/Daniel/Projects/mac-playground/mono/mcs/class/System.Windows.Forms/bin/Xamarin - Debug/da/System.Windows.Forms.resources.dll"
+"/assembly:/Users/Daniel/Projects/mac-playground/mono/mcs/class/System.Windows.Forms/bin/Xamarin - Debug/no/System.Windows.Forms.resources.dll"
+"/assembly:/Users/Daniel/Projects/mac-playground/mono/mcs/class/System.Windows.Forms/bin/Xamarin - Debug/ja/System.Windows.Forms.resources.dll"
+"/assembly:/Users/Daniel/Projects/mac-playground/mono/mcs/class/System.Windows.Forms/bin/Xamarin - Debug/el/System.Windows.Forms.resources.dll"
+"/assembly:/Users/Daniel/Projects/mac-playground/mono/mcs/class/System.Windows.Forms/bin/Xamarin - Debug/it/System.Windows.Forms.resources.dll"
+"/assembly:/Users/Daniel/Projects/mac-playground/mono/mcs/class/System.Windows.Forms/bin/Xamarin - Debug/cs/System.Windows.Forms.resources.dll"
+"/assembly:/Users/Daniel/Projects/mac-playground/mono/mcs/class/System.Windows.Forms/bin/Xamarin - Debug/ru/System.Windows.Forms.resources.dll"
+"/assembly:/Users/Daniel/Projects/mac-playground/mono/mcs/class/System.Windows.Forms/bin/Xamarin - Debug/pt/System.Windows.Forms.resources.dll"
+"/assembly:/Users/Daniel/Projects/mac-playground/mono/mcs/class/System.Windows.Forms/bin/Xamarin - Debug/zh/System.Windows.Forms.resources.dll"
+"/assembly:/Users/Daniel/Projects/mac-playground/mono/mcs/class/System.Windows.Forms/bin/Xamarin - Debug/hu/System.Windows.Forms.resources.dll"
+"/assembly:/Users/Daniel/Projects/mac-playground/mono/mcs/class/System.Windows.Forms/bin/Xamarin - Debug/nl/System.Windows.Forms.resources.dll"
+"/assembly:/Users/Daniel/Projects/mac-playground/mono/mcs/class/System.Windows.Forms/bin/Xamarin - Debug/de/System.Windows.Forms.resources.dll"
+"/assembly:/Users/Daniel/Projects/mac-playground/mono/mcs/class/System.Windows.Forms/bin/Xamarin - Debug/ko/System.Windows.Forms.resources.dll"
+"/assembly:/Users/Daniel/Projects/mac-playground/mono/mcs/class/System.Windows.Forms/bin/Xamarin - Debug/fr/System.Windows.Forms.resources.dll"
+"/assembly:/Users/Daniel/Projects/mac-playground/mono/mcs/class/System.Windows.Forms/bin/Xamarin - Debug/es/System.Windows.Forms.resources.dll"
+"/assembly:/Users/Daniel/Projects/mac-playground/mono/mcs/class/System.Windows.Forms/bin/Xamarin - Debug/tr/System.Windows.Forms.resources.dll"
+"/root-assembly:/Users/Daniel/Projects/mac-playground/FormsTestApp/bin/Xamarin - Debug/FormsTestApp.exe"
+/sdkroot:/Applications/Xcode.app/Contents/Developer
+"--cache:/Users/Daniel/Projects/mac-playground/FormsTestApp/obj/Xamarin - Debug/FormsTest.app/mmp-cache"

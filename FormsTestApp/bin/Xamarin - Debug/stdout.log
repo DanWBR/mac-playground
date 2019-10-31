@@ -1,0 +1,8 @@
+getrlimit(1024, 9223372036854775807) => 0
+setrlimit(9000, 9000) => 0
+getrlimit(9000, 9000) => 0
+setrlimit(4000, 9000) => 0
+getrlimit(4000, 9000) => 0
+#3994
+measure cache hit:0, miss:0, size:0
+draw cache hit:0, miss:0, size:0

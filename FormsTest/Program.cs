@@ -24,9 +24,9 @@ using MonoMac.AppKit;
 
 namespace FormsTest
 {
-	public static class Program
-	{
-		//public static Settings Settings { get; private set; }
+    public static class Program
+    {
+        //public static Settings Settings { get; private set; }
 
 #if INCLUDE_CEF_TEST
 		static CefApp a = new MyCefApp();
@@ -44,106 +44,123 @@ namespace FormsTest
 		}
 #endif
 
-		/// <summary>
-		/// The main entry point for the application.
-		/// </summary>
-		[STAThread]
-		public static void Main(string[] args)
-		{
-			MaxOpenFiles();
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        public static void Main(string[] args)
+        {
 
-			Application.EnableVisualStyles();
-			Application.SetCompatibleTextRenderingDefault(false);
-			Application.ApplicationExit += (object sender, EventArgs e) =>
-			{
-				//UrlProtocol.Unregister();
-			};
+            NSApplication.Init();
 
-			//UrlProtocol.Register();
+            MaxOpenFiles();
 
-			//Marshalling.Initialize();
-			//CefApp.
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.ApplicationExit += (object sender, EventArgs e) =>
+            {
+                //UrlProtocol.Unregister();
+            };
 
-			var menuBar = new NSMenu("");
+            //UrlProtocol.Register();
 
-			var appMenuItem = new NSMenuItem("");
-			var appMenu = new NSMenu("FormsTest");
-			var quitItem = new NSMenuItem("Quit") { KeyEquivalent = "q" };
-			quitItem.Activated += (sender, e) => { Terminate(); };
-			appMenu.AddItem(quitItem);
-			menuBar.AddItem(appMenuItem);
-			menuBar.SetSubmenu(appMenu, appMenuItem);
+            //Marshalling.Initialize();
+            //CefApp.
 
-			var editMenuItem = new NSMenuItem();
-			var editMenu = new NSMenu("Edit");
-			var selectAllItem = new NSMenuItem("Select All") { Action = new ObjCRuntime.Selector("selectAll:"), KeyEquivalent = "a" };
-			editMenu.AddItem(selectAllItem);
-			var copyItem = new NSMenuItem("Copy") { Action = new ObjCRuntime.Selector("copy:"), KeyEquivalent="c" };
-			editMenu.AddItem(copyItem);
-			var pasteItem = new NSMenuItem("Paste") { Action = new ObjCRuntime.Selector("paste:") , KeyEquivalent="v" };
-			editMenu.AddItem(pasteItem);
-			menuBar.AddItem(editMenuItem);
-			menuBar.SetSubmenu(editMenu, editMenuItem);
+            var menuBar = new NSMenu("");
 
-			NSApplication.SharedApplication.Menu = menuBar;
+            var appMenuItem = new NSMenuItem("");
+            var appMenu = new NSMenu("FormsTest");
+            var quitItem = new NSMenuItem("Quit") { KeyEquivalent = "q" };
+            quitItem.Activated += (sender, e) => { Terminate(); };
+            appMenu.AddItem(quitItem);
+            menuBar.AddItem(appMenuItem);
+            menuBar.SetSubmenu(appMenu, appMenuItem);
 
-			var f = new MainForm();
-			f.Show();
-			Application.Run();
+            var editMenuItem = new NSMenuItem();
+            var editMenu = new NSMenu("Edit");
+            var selectAllItem = new NSMenuItem("Select All") { Action = new ObjCRuntime.Selector("selectAll:"), KeyEquivalent = "a" };
+            editMenu.AddItem(selectAllItem);
+            var copyItem = new NSMenuItem("Copy") { Action = new ObjCRuntime.Selector("copy:"), KeyEquivalent = "c" };
+            editMenu.AddItem(copyItem);
+            var pasteItem = new NSMenuItem("Paste") { Action = new ObjCRuntime.Selector("paste:"), KeyEquivalent = "v" };
+            editMenu.AddItem(pasteItem);
+            menuBar.AddItem(editMenuItem);
+            menuBar.SetSubmenu(editMenu, editMenuItem);
 
-			var threads = Process.GetCurrentProcess().Threads;
+            NSApplication.SharedApplication.Menu = menuBar;
 
-			Terminate();
-		}
+            //var f = new MainForm();
+            //f.Show();
+
+            var tv = new TreeView();
+            tv.Nodes.Add("TESTNODE");
+            tv.Nodes.Add("TESTNODE2");
+            tv.Nodes.Add("TESTNODE3");
+            tv.Dock = DockStyle.Fill;
+            var f = new Form();
+            f.Width = 300;
+            f.Height = 300;
+            f.Controls.Add(tv);
+            f.Show();
+
+            Application.Run();
+
+            var threads = Process.GetCurrentProcess().Threads;
+
+            Terminate();
+        }
 
 #if MAC
-		static void Terminate()
-		{
-			// Workaround for not exiting the app because of pending threads related to UrlProtocol subclass.
-			NSApplication.SharedApplication.Terminate(NSApplication.SharedApplication);
-		}
+        static void Terminate()
+        {
+            // Workaround for not exiting the app because of pending threads related to UrlProtocol subclass.
+            NSApplication.SharedApplication.Terminate(NSApplication.SharedApplication);
+        }
 
-		static void MaxOpenFiles()
-		{
-			var lim = new LibC.rlimit();
-			var ok = LibC.getrlimit((int)LibC.RLimit.NoFile, ref lim);
-			Console.WriteLine($"getrlimit({lim.cur}, {lim.max}) => {ok}");
+        static void MaxOpenFiles()
+        {
+            var lim = new LibC.rlimit();
+            var ok = LibC.getrlimit((int)LibC.RLimit.NoFile, ref lim);
+            Console.WriteLine($"getrlimit({lim.cur}, {lim.max}) => {ok}");
 
-			int n = 9000;
-			lim.cur = lim.max = (UInt64)n;
-			ok = LibC.setrlimit((int)LibC.RLimit.NoFile, ref lim);
-			Console.WriteLine($"setrlimit({lim.cur}, {lim.max}) => {ok}");
-			ok = LibC.getrlimit((int)LibC.RLimit.NoFile, ref lim);
-			Console.WriteLine($"getrlimit({lim.cur}, {lim.max}) => {ok}");
+            int n = 9000;
+            lim.cur = lim.max = (UInt64)n;
+            ok = LibC.setrlimit((int)LibC.RLimit.NoFile, ref lim);
+            Console.WriteLine($"setrlimit({lim.cur}, {lim.max}) => {ok}");
+            ok = LibC.getrlimit((int)LibC.RLimit.NoFile, ref lim);
+            Console.WriteLine($"getrlimit({lim.cur}, {lim.max}) => {ok}");
 
-			lim.cur = (UInt64)4000;
-			ok = LibC.setrlimit((int)LibC.RLimit.NoFile, ref lim);
-			Console.WriteLine($"setrlimit({lim.cur}, {lim.max}) => {ok}");
-			ok = LibC.getrlimit((int)LibC.RLimit.NoFile, ref lim);
-			Console.WriteLine($"getrlimit({lim.cur}, {lim.max}) => {ok}");
+            lim.cur = (UInt64)4000;
+            ok = LibC.setrlimit((int)LibC.RLimit.NoFile, ref lim);
+            Console.WriteLine($"setrlimit({lim.cur}, {lim.max}) => {ok}");
+            ok = LibC.getrlimit((int)LibC.RLimit.NoFile, ref lim);
+            Console.WriteLine($"getrlimit({lim.cur}, {lim.max}) => {ok}");
 
-			var a = new Stream[n];
-			var f = Path.GetTempFileName();
-			int i = 0;
-			try
-			{
-				for (i = 0; i < n; ++i)
-				{
-					a[i] = new FileStream(f, FileMode.Open, FileAccess.Read);
-					//var result = LibC.open(f, LibC.FileMode.S_IRUSR);
-					//var result = LibC.fopen(f, "rb");
-					//if (result == IntPtr.Zero)
-						//break;
-				}
-			}
-			catch
-			{
-			}
-			finally
-			{
-				for (int j = i - 1; j >= 0; --j) 					a[j].Close(); 			}
-			Console.WriteLine($"#{i}");
-		}
+            var a = new Stream[n];
+            var f = Path.GetTempFileName();
+            int i = 0;
+            try
+            {
+                for (i = 0; i < n; ++i)
+                {
+                    a[i] = new FileStream(f, FileMode.Open, FileAccess.Read);
+                    //var result = LibC.open(f, LibC.FileMode.S_IRUSR);
+                    //var result = LibC.fopen(f, "rb");
+                    //if (result == IntPtr.Zero)
+                    //break;
+                }
+            }
+            catch
+            {
+            }
+            finally
+            {
+                for (int j = i - 1; j >= 0; --j)
+                    a[j].Close();
+            }
+            Console.WriteLine($"#{i}");
+        }
 #else
 		static void Terminate()
 		{
@@ -153,5 +170,5 @@ namespace FormsTest
 		{
 		}
 #endif
-	}
+    }
 }

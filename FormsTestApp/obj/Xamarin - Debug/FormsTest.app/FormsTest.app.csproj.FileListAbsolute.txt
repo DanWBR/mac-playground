@@ -1,0 +1,9 @@
+/Users/Daniel/Projects/mac-playground/FormsTestApp/bin/Xamarin - Debug/FormsTestApp.exe
+/Users/Daniel/Projects/mac-playground/FormsTestApp/bin/Xamarin - Debug/FormsTestApp.pdb
+/Users/Daniel/Projects/mac-playground/FormsTestApp/obj/Xamarin - Debug/FormsTest.app/actool/_PartialAppManifest.items
+/Users/Daniel/Projects/mac-playground/FormsTestApp/obj/Xamarin - Debug/FormsTest.app/actool/_BundleResourceWithLogicalName.items
+/Users/Daniel/Projects/mac-playground/FormsTestApp/obj/Xamarin - Debug/FormsTest.app/FormsTest.app.csprojAssemblyReference.cache
+/Users/Daniel/Projects/mac-playground/FormsTestApp/obj/Xamarin - Debug/FormsTest.app/App.ico
+/Users/Daniel/Projects/mac-playground/FormsTestApp/obj/Xamarin - Debug/FormsTest.app/car.png
+/Users/Daniel/Projects/mac-playground/FormsTestApp/obj/Xamarin - Debug/FormsTest.app/FormsTestApp.exe
+/Users/Daniel/Projects/mac-playground/FormsTestApp/obj/Xamarin - Debug/FormsTest.app/FormsTestApp.pdb
