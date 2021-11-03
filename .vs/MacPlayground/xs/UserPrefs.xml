@@ -3,7 +3,13 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="MacPlayground" expanded="True" selected="True" />
+          <Node name="MacPlayground" expanded="True">
+            <Node name="System.Drawing (CoreGraphics)" expanded="True">
+              <Node name="System.Drawing" expanded="True">
+                <Node name="Bitmap.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
